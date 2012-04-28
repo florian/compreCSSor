@@ -10,7 +10,7 @@ Or if you want, you can fork this project on [GitHub](https://github.com/js-code
 # Credits
 
 **Authors:** <br />
-Florian H <dotiweb@googlemail.com> <br />
+Florian H. <br />
 Mogria <m0gr14@gmail.com>
 
 **License:** <br />
