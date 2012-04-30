@@ -3,7 +3,7 @@ padding0
 
 A CSS minifier built with Ruby — Work in progress.
 
-# Way to minify the CSS
+# Ways to minify the CSS
 
 - Combine selectors. (This will probably reduce the code more than anything else, so it has to be done really good.)
 - Combine properties into shorthand properties if possible. (E.g. `margin-top`, `margin-right`, `margin-bottom` and `margin-left` into `margin`.)
