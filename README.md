@@ -15,6 +15,23 @@ A CSS minifier built with Ruby — Work in progress.
 - Replace `rgb`, `hsl`, `rgba` / `hsla` with `1` as the alpha value, `cymk` and the color keywords if they are longer than 4 or 7 characters with their corresponding HEX values. Use the color keywords if they are shorter than the corresponding HEX values. (E.g. `red` instead of `#f00`.)
 - Use shorthand HEX values if possible. (`#f80` instead of `#ff8800`.)
 
+# API usage [draft]
+
+```ruby
+require 'padding0'
+compiler = padding0.new
+
+compiler.minify('The CSS in a string', {}); # CSS in a string
+
+file = File.open('file.css')
+compiler.minify(file); # CSS in a file
+
+file2 = File.open('file2.css')
+compiler.minify([file, file2]) # Two CSS files
+
+compiler.minify(file, {}) # Options in a hash
+```
+
 # Contributing
 
 If you've found any bugs or have suggestions, let us know!<br />
