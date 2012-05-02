@@ -6,6 +6,7 @@ A CSS minifier built with Ruby — Work in progress.
 # Ways to minify the CSS
 
 - Combine selectors. (This will probably reduce the code more than anything else, so it has to be done really good.)
+- Optimize unnecessary specific selectors. E.g. `body div #id` to `#id`.
 - Combine properties into shorthand properties if possible. (E.g. `margin-top`, `margin-right`, `margin-bottom` and `margin-left` into `margin`.)
 - Remove all whitespace characters and `/* */` comments if they are not inside a string. This will be done automatically because of the way the CSS is parsed and rearranged.
 - Omit the last semicolon as it's optional.
