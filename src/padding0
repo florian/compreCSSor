@@ -2,11 +2,13 @@
 
 require 'parser.rb'
 
+# enougth arguments given
 if ARGV.empty?
   puts "USAGE: padding0 [file] ..."
 else 
   file = ARGV[0]
   if File.exist?(file)
+    # read the file and parse it using the Parser class
     data = IO.read(file)
     puts data
     Parser.new(data)
