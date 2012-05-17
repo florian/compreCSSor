@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require 'parser.rb'
+
+if ARGV.empty?
+  puts "USAGE: padding0 [file] ..."
+else 
+  file = ARGV[0]
+  if File.exist?(file)
+    data = IO.read(file)
+    puts data
+    Parser.new(data)
+  else
+    pits "File #{file} does not exist!"
+  end
+end

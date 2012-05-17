@@ -1,3 +1,4 @@
+# define some macros needed for the tokens
 macros = {
   :unicode          => /\\[0-9a-f]{1,6}(?:\r\n|[ \n\r\t\f])/,
   :nonascii         => /[^\0-\237]/,
@@ -25,6 +26,7 @@ macros[:baduri2]     = /url\(#{macros[:w].source}#{macros[:string].source}#{macr
 macros[:baduri3]     = /url\(#{macros[:w].source}#{macros[:badstring].source}/
 macros[:baduri]      = /(?:#{macros[:baduri1].source}|#{macros[:baduri2].source}|#{macros[:baduri3].source})/
 
+# define some tokens of an CSS file
 tokens = {}
 tokens[:INDENT]      = /#{macros[:ident].source}/
 tokens[:ATKEYWORD]   = /@#{macros[:ident].source}/
@@ -53,3 +55,6 @@ tokens[:COMMENT]     = /\/\*[^\*]*\*+([^\/\*][^\*]*\*+)*\//
 tokens[:FUNCTION]    = /#{macros[:ident].source}\(/
 tokens[:INCLUDES]    = /~=/
 tokens[:DASHMATCH]   = /\|=/
+
+# Make the tokens global
+$tokens = tokens
