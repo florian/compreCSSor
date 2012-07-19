@@ -32,6 +32,59 @@ compiler.minify([file, file2]) # Two CSS files
 compiler.minify(file, {}) # Options in a hash
 ```
 
+# Parser [draft]
+
+```ruby
+// Parser output:
+
+{
+
+  'at-rules' => {
+
+    'charset' => '',
+
+    'media' => [
+      { 'conditions' => [], 'rules' => {} },
+    ],
+
+    'import' => [
+      { 'url' => '', 'conditions': [] }
+    ],
+
+    'page': [
+      { 'selector' => '', 'rules' => {} }
+    ],
+
+    'font-face': [
+      { rules => {} }
+    ],
+
+    'namespace' => [] # ?
+
+  },
+
+  'rules' => {
+
+    'key:selector' => {
+      'property' => 'value'
+    }
+
+  }
+
+}
+```
+
+Parsing `h1 { color: red; }` should return a `rules` hash:
+
+```ruby
+{
+	'h1' => {
+		'color' = 'red'
+	}
+}
+```
+
+
 # Contributing
 
 If you've found any bugs or have suggestions, let us know!<br />
