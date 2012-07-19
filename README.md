@@ -59,7 +59,11 @@ compiler.minify(file, {}) # Options in a hash
       { rules => {} }
     ],
 
-    'namespace' => [] # ?
+    'namespace' => [], # ?
+
+    'keyframe' => [
+      { 'name' => '', 'rules' => {} }
+    ]
 
   },
 
