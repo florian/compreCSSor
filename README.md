@@ -1,4 +1,4 @@
-padding0
+compreCSSor
 ========
 
 A CSS minifier built with Ruby — Work in progress.
@@ -18,8 +18,8 @@ A CSS minifier built with Ruby — Work in progress.
 # API usage [draft]
 
 ```ruby
-require 'padding0'
-compiler = padding0.new
+require 'comprecssor'
+compiler = comprecssor.new
 
 compiler.minify('The CSS in a string', {}); # CSS in a string
 
@@ -92,7 +92,7 @@ Parsing `h1 { color: red; }` should return a `rules` hash:
 # Contributing
 
 If you've found any bugs or have suggestions, let us know!<br />
-Or if you want, you can fork this project on [GitHub](https://github.com/js-coder/padding0) and create a pull request.
+Or if you want, you can fork this project on [GitHub](https://github.com/js-coder/compreCSSor) and create a pull request.
 
 # Credits :)
 
